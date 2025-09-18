@@ -52,7 +52,9 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
   - [`seeds`](#seeds)
   - [`madeinheaven`](#madeinheaven)
   - [`rush`](#rush)
+  - [`mirrormineshaft`](#mirrormineshaft)
   - [`delirium`](#delirium)
+  - [`tp`](#tp)
 - [不支持缩写的指令](#不支持缩写的指令)
   - [`version`](#version)
 
@@ -458,11 +460,30 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 
 [点我返回速查](#指令速查)
 
+### `mirrormineshaft`
+
+如果当前层存在镜子房间或矿井房间，则移除迷宫诅咒并传送至对应房间房间。
+指令格式：`mirrormineshaft`
+
+[点我返回速查](#指令速查)
+
 ### `delirium`
 
 如果当前层存在精神错乱，则移除迷宫诅咒并传送至精神错乱房间。
 指令格式：`delirium`
 
+[点我返回速查](#指令速查)
+
+### `tp`
+
+当目标房间存在时，传送玩家至指定房间坐标。
+指令格式：
+
+1. `tp`：显示当前房间坐标；
+2. `tp MM`：传送玩家至房间坐标为`MM`的房间；
+3. `tp SS`：传送玩家至类型为`SS`的房间，`SS`为房间类型名称；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略。
+
+房间坐标和房间类型参考：[房间类型列表](https://wofsauge.github.io/IsaacDocs/rep/enums/GridRooms.html?h=gridrooms)
 [点我返回速查](#指令速查)
 
 ---
