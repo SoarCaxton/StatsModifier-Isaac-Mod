@@ -55,6 +55,7 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
   - [`mirrormineshaft`](#mirrormineshaft)
   - [`delirium`](#delirium)
   - [`tp`](#tp)
+  - [`ascent`](#ascent)
 - [不支持缩写的指令](#不支持缩写的指令)
   - [`version`](#version)
 
@@ -484,6 +485,13 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 3. `tp SS`：传送玩家至类型为`SS`的房间，`SS`为房间类型名称；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略。
 
 房间坐标和房间类型参考：[房间类型列表](https://wofsauge.github.io/IsaacDocs/rep/enums/GridRooms.html?h=gridrooms)
+
+[点我返回速查](#指令速查)
+
+### `ascent`
+
+切换标签-触发回溯线的值，该值决定了陵墓II/炼狱II的头目房是否生成爸爸的便条。
+指令格式：`ascent`
 
 [点我返回速查](#指令速查)
 
