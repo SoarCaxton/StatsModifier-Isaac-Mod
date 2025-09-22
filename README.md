@@ -9,17 +9,17 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 ## 指令速查
 
 - [基础显示功能](#基础显示功能)
+  - [`entity`](#entity)
   - [`id`](#id)
   - [`info`](#info)
-  - [`entity`](#entity)
   - [`mouse`](#mouse)
 - [玩家属性修改](#玩家属性修改)
-  - [`speed`](#speed)
-  - [`tears`](#tears)
   - [`damage`](#damage)
+  - [`luck`](#luck)
   - [`range`](#range)
   - [`shotspeed`](#shotspeed)
-  - [`luck`](#luck)
+  - [`speed`](#speed)
+  - [`tears`](#tears)
 - [隐藏属性修改](#隐藏属性修改)
   - [`fly`](#fly)
   - [`size`](#size)
@@ -27,41 +27,48 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
   - [`all`](#all)
   - [`clean`](#clean)
 - [玩家功能修改](#玩家功能修改)
-  - [`lost`](#lost)
   - [`blind`](#blind)
-  - [`coins`](#coins)
   - [`bombs`](#bombs)
-  - [`gigabombs`](#gigabombs)
-  - [`keys`](#keys)
-  - [`golden`](#golden)
-  - [`playertype`](#playertype)
+  - [`coins`](#coins)
   - [`die`](#die)
-  - [`revive`](#revive)
   - [`gc`](#gc)
-  - [`rc`](#rc)
-  - [`pocket`](#pocket)
+  - [`gigabombs`](#gigabombs)
+  - [`golden`](#golden)
   - [`gulp`](#gulp)
+  - [`keys`](#keys)
+  - [`lost`](#lost)
+  - [`playertype`](#playertype)
+  - [`pocket`](#pocket)
+  - [`rc`](#rc)
+  - [`revive`](#revive)
   - [`wavycap`](#wavycap)
 - [游戏状态修改](#游戏状态修改)
-  - [`changechallenge`](#changechallenge)
-  - [`eastereggs`](#eastereggs)
-  - [`timecounter`](#timecounter)
-  - [`icansee`](#icansee)
-  - [`uncovereverything`](#uncovereverything)
-  - [`finish`](#finish)
-  - [`seeds`](#seeds)
-  - [`madeinheaven`](#madeinheaven)
-  - [`rush`](#rush)
-  - [`mirrormineshaft`](#mirrormineshaft)
-  - [`delirium`](#delirium)
-  - [`tp`](#tp)
   - [`ascent`](#ascent)
+  - [`changechallenge`](#changechallenge)
+  - [`delirium`](#delirium)
+  - [`eastereggs`](#eastereggs)
+  - [`finish`](#finish)
+  - [`icansee`](#icansee)
+  - [`madeinheaven`](#madeinheaven)
+  - [`mirrormineshaft`](#mirrormineshaft)
+  - [`rush`](#rush)
+  - [`seeds`](#seeds)
+  - [`timecounter`](#timecounter)
+  - [`tp`](#tp)
+  - [`uncovereverything`](#uncovereverything)
 - [不支持缩写的指令](#不支持缩写的指令)
   - [`version`](#version)
 
 ---
 
 ## 基础显示功能
+
+### `entity`
+
+打开/关闭实体信息显示。
+指令格式：
+`entity`
+[点我返回速查](#指令速查)
 
 ### `id`
 
@@ -77,13 +84,6 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 `info`
 [点我返回速查](#指令速查)
 
-### `entity`
-
-打开/关闭实体信息显示。
-指令格式：
-`entity`
-[点我返回速查](#指令速查)
-
 ### `mouse`
 
 打开/关闭鼠标位置三维度坐标显示。
@@ -94,38 +94,6 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 ---
 
 ## 玩家属性修改
-
-### `speed`
-
-修改玩家移动速度，指令格式为：`speedNN MM`，即设置ID为`NN`的玩家移动速度为`MM`。
-`MM`可为负数，也可为`±inf`表示无穷大。
-其他指令格式：
-
-1. `speedNN +MM`: 将ID为`NN`的玩家的移动速度增加`MM`
-2. `speedNN *MM`: 将ID为`NN`的玩家的移动速度乘以`MM`
-3. `speedNN _MM`: **强制**设置ID为`NN`的玩家的移动速度为`MM`，该属性不参与游戏内的属性计算
-4. `speedNN _+MM`: **强制**将ID为`NN`的玩家的移动速度增加`MM`，该属性不参与游戏内的属性计算
-5. `speedNN _*MM`: **强制**将ID为`NN`的玩家的移动速度乘以`MM`，该属性不参与游戏内的属性计算
-6. `speedNN`：取消ID为`NN`的玩家速度修改
-
-`NN`可省略，默认为0。
-[点我返回速查](#指令速查)
-
-### `tears`
-
-修改玩家射速，指令格式为：`tearsNN MM`，即设置ID为`NN`的玩家射速为`MM`。
-`MM`可为负数，也可为`±inf`表示无穷大。
-其他指令格式：
-
-1. `tearsNN +MM`: 将ID为`NN`的玩家的射速增加`MM`
-2. `tearsNN *MM`: 将ID为`NN`的玩家的射速乘以`MM`
-3. `tearsNN _MM`: **强制**设置ID为`NN`的玩家的射速为`MM`，该属性不参与游戏内的属性计算
-4. `tearsNN _+MM`: **强制**将ID为`NN`的玩家的射速增加`MM`，该属性不参与游戏内的属性计算
-5. `tearsNN _*MM`: **强制**将ID为`NN`的玩家的射速乘以`MM`，该属性不参与游戏内的属性计算
-6. `tearsNN`：取消ID为`NN`的玩家射速修改
-
-`NN`可省略，默认为0。
-[点我返回速查](#指令速查)
 
 ### `damage`
 
@@ -139,6 +107,22 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 4. `damageNN _+MM`: **强制**将ID为`NN`的玩家的伤害增加`MM`，该属性不参与游戏内的属性计算
 5. `damageNN _*MM`: **强制**将ID为`NN`的玩家的伤害乘以`MM`，该属性不参与游戏内的属性计算
 6. `damageNN`：取消ID为`NN`的玩家伤害修改
+
+`NN`可省略，默认为0。
+[点我返回速查](#指令速查)
+
+### `luck`
+
+修改玩家幸运值，指令格式为：`luckNN MM`，即设置ID为`NN`的玩家幸运值为`MM`。
+`MM`可为负数，也可为`±inf`表示无穷大。
+其他指令格式：
+
+1. `luckNN +MM`: 将ID为`NN`的玩家的幸运值增加`MM`
+2. `luckNN *MM`: 将ID为`NN`的玩家的幸运值乘以`MM`
+3. `luckNN _MM`: **强制**设置ID为`NN`的玩家的幸运值为`MM`，该属性不参与游戏内的属性计算
+4. `luckNN _+MM`: **强制**将ID为`NN`的玩家的幸运值增加`MM`，该属性不参与游戏内的属性计算
+5. `luckNN _*MM`: **强制**将ID为`NN`的玩家的幸运值乘以`MM`，该属性不参与游戏内的属性计算
+6. `luckNN`：取消ID为`NN`的玩家幸运值修改
 
 `NN`可省略，默认为0。
 [点我返回速查](#指令速查)
@@ -175,18 +159,34 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 `NN`可省略，默认为0。
 [点我返回速查](#指令速查)
 
-### `luck`
+### `speed`
 
-修改玩家幸运值，指令格式为：`luckNN MM`，即设置ID为`NN`的玩家幸运值为`MM`。
+修改玩家移动速度，指令格式为：`speedNN MM`，即设置ID为`NN`的玩家移动速度为`MM`。
 `MM`可为负数，也可为`±inf`表示无穷大。
 其他指令格式：
 
-1. `luckNN +MM`: 将ID为`NN`的玩家的幸运值增加`MM`
-2. `luckNN *MM`: 将ID为`NN`的玩家的幸运值乘以`MM`
-3. `luckNN _MM`: **强制**设置ID为`NN`的玩家的幸运值为`MM`，该属性不参与游戏内的属性计算
-4. `luckNN _+MM`: **强制**将ID为`NN`的玩家的幸运值增加`MM`，该属性不参与游戏内的属性计算
-5. `luckNN _*MM`: **强制**将ID为`NN`的玩家的幸运值乘以`MM`，该属性不参与游戏内的属性计算
-6. `luckNN`：取消ID为`NN`的玩家幸运值修改
+1. `speedNN +MM`: 将ID为`NN`的玩家的移动速度增加`MM`
+2. `speedNN *MM`: 将ID为`NN`的玩家的移动速度乘以`MM`
+3. `speedNN _MM`: **强制**设置ID为`NN`的玩家的移动速度为`MM`，该属性不参与游戏内的属性计算
+4. `speedNN _+MM`: **强制**将ID为`NN`的玩家的移动速度增加`MM`，该属性不参与游戏内的属性计算
+5. `speedNN _*MM`: **强制**将ID为`NN`的玩家的移动速度乘以`MM`，该属性不参与游戏内的属性计算
+6. `speedNN`：取消ID为`NN`的玩家速度修改
+
+`NN`可省略，默认为0。
+[点我返回速查](#指令速查)
+
+### `tears`
+
+修改玩家射速，指令格式为：`tearsNN MM`，即设置ID为`NN`的玩家射速为`MM`。
+`MM`可为负数，也可为`±inf`表示无穷大。
+其他指令格式：
+
+1. `tearsNN +MM`: 将ID为`NN`的玩家的射速增加`MM`
+2. `tearsNN *MM`: 将ID为`NN`的玩家的射速乘以`MM`
+3. `tearsNN _MM`: **强制**设置ID为`NN`的玩家的射速为`MM`，该属性不参与游戏内的属性计算
+4. `tearsNN _+MM`: **强制**将ID为`NN`的玩家的射速增加`MM`，该属性不参与游戏内的属性计算
+5. `tearsNN _*MM`: **强制**将ID为`NN`的玩家的射速乘以`MM`，该属性不参与游戏内的属性计算
+6. `tearsNN`：取消ID为`NN`的玩家射速修改
 
 `NN`可省略，默认为0。
 [点我返回速查](#指令速查)
@@ -236,23 +236,9 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 
 ## 玩家功能修改
 
-### `lost`
-
-将玩家在接触白火后的灵魂形态和普通形态之间切换，指令格式为：`lostNN`，即切换ID为`NN`的玩家的灵魂形态和普通形态。
-`NN`可省略，默认为0。
-[点我返回速查](#指令速查)
-
 ### `blind`
 
 指令格式为：`blindNN`，即切换ID为`NN`的玩家的蒙眼状态。
-`NN`可省略，默认为0。
-[点我返回速查](#指令速查)
-
-### `coins`
-
-给予玩家硬币，指令格式为：`coinsNN MM`，即给予ID为`NN`的玩家`MM`个硬币。
-`MM`可为负数，也可为`±inf`表示无穷大。
-`MM`为空时，清空玩家的硬币。
 `NN`可省略，默认为0。
 [点我返回速查](#指令速查)
 
@@ -264,12 +250,60 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 `NN`可省略，默认为0。
 [点我返回速查](#指令速查)
 
+### `coins`
+
+给予玩家硬币，指令格式为：`coinsNN MM`，即给予ID为`NN`的玩家`MM`个硬币。
+`MM`可为负数，也可为`±inf`表示无穷大。
+`MM`为空时，清空玩家的硬币。
+`NN`可省略，默认为0。
+[点我返回速查](#指令速查)
+
+### `die`
+
+杀死玩家，指令格式为：`dieNN`，即杀死ID为`NN`的玩家。
+`NN`可省略，默认为0。
+[点我返回速查](#指令速查)
+
+### `gc`
+
+给予玩家道具。
+指令格式：
+
+1. `gcNN MM`：给予ID为`NN`的玩家道具`MM`，`MM`为道具ID；
+2. `gcNN _MM`：给予ID为`NN`的玩家道具`MM`，`MM`为道具ID；若`MM`为主动道具，则将其放置在角色副手；
+3. `gcNN SS`：给予ID为`NN`的玩家道具`SS`，`SS`为道具名称；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略，`SS`中的标点符号需**省略**。
+4. `gcNN _SS`：给予ID为`NN`的玩家道具`SS`，`SS`为道具名称；若`SS`为主动道具，则将其放置在角色副手；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略，`SS`中的标点符号需**省略**。
+
+`MM`、`SS`均**支持**添加错误道具。
+`NN`可省略，默认为0。
+
+道具ID和道具名称参考：[道具列表](https://wofsauge.github.io/IsaacDocs/rep/enums/CollectibleType.html?h=collectibletype)
+[点我返回速查](#指令速查)
+
 ### `gigabombs`
 
 给予玩家巨型炸弹，指令格式为：`gigabombsNN MM`，即给予ID为`NN`的玩家`MM`个巨型炸弹。
 `MM`可为负数，也可为`±inf`表示无穷大。
 当`MM`为空时，将玩家`NN`的大炸弹变回普通炸弹。
 `NN`可省略，默认为0。
+[点我返回速查](#指令速查)
+
+### `golden`
+
+给予玩家金炸弹、金钥匙
+[点我返回速查](#指令速查)
+
+### `gulp`
+
+玩家获得被吞下的饰品。
+
+1. `gulpNN MM`：给予ID为`NN`的玩家被吞下的饰品`MM`，`MM`为饰品ID；
+2. `gulpNN SS`：给予ID为`NN`的玩家被吞下的饰品`SS`，`SS`为饰品名称；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略，`SS`中的标点符号需**省略**。
+3. `gulpNN`：ID为`NN`的玩家吞下当前饰品栏中的饰品。
+
+`NN`可省略，默认为0。
+
+饰品ID和饰品名称参考：[饰品列表](https://wofsauge.github.io/IsaacDocs/rep/enums/TrinketType.html?h=trinkettype)
 [点我返回速查](#指令速查)
 
 ### `keys`
@@ -280,10 +314,12 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 `NN`可省略，默认为0。
 [点我返回速查](#指令速查)
 
-### `golden`
+### `lost`
 
-给予玩家金炸弹、金钥匙
+将玩家在接触白火后的灵魂形态和普通形态之间切换，指令格式为：`lostNN`，即切换ID为`NN`的玩家的灵魂形态和普通形态。
+`NN`可省略，默认为0。
 [点我返回速查](#指令速查)
+
 
 ### `playertype`
 
@@ -300,28 +336,14 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 角色类型和角色名称参考：[玩家类型](https://wofsauge.github.io/IsaacDocs/rep/enums/PlayerType.html?h=playertype)
 [点我返回速查](#指令速查)
 
-### `die`
+### `pocket`
 
-杀死玩家，指令格式为：`dieNN`，即杀死ID为`NN`的玩家。
-`NN`可省略，默认为0。
-[点我返回速查](#指令速查)
-
-### `revive`
-
-复活玩家，指令格式为：`reviveNN`，即复活ID为`NN`的玩家。
-只能在玩家实体被移除前使用该指令，使用该指令复活玩家后，菜单中将不能继续游戏。
-`NN`可省略，默认为0。
-[点我返回速查](#指令速查)
-
-### `gc`
-
-给予玩家道具。
+在每个首次访问的新房间中给予玩家一次性主动道具。
 指令格式：
 
-1. `gcNN MM`：给予ID为`NN`的玩家道具`MM`，`MM`为道具ID；
-2. `gcNN _MM`：给予ID为`NN`的玩家道具`MM`，`MM`为道具ID；若`MM`为主动道具，则将其放置在角色副手；
-3. `gcNN SS`：给予ID为`NN`的玩家道具`SS`，`SS`为道具名称；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略，`SS`中的标点符号需**省略**。
-4. `gcNN _SS`：给予ID为`NN`的玩家道具`SS`，`SS`为道具名称；若`SS`为主动道具，则将其放置在角色副手；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略，`SS`中的标点符号需**省略**。
+1. `pocketNN MM`：在每个首次访问的新房间中给予ID为`NN`的玩家道具`MM`，`MM`为道具ID；
+2. `pocketNN SS`：在每个首次访问的新房间中给予ID为`NN`的玩家道具`SS`，`SS`为道具名称；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略，`SS`中的标点符号需**省略**。
+3. `pocketNN 0`：ID为`NN`的玩家不再获得一次性道具。
 
 `MM`、`SS`均**支持**添加错误道具。
 `NN`可省略，默认为0。
@@ -345,32 +367,11 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 道具ID和道具名称参考：[道具列表](https://wofsauge.github.io/IsaacDocs/rep/enums/CollectibleType.html?h=collectibletype)
 [点我返回速查](#指令速查)
 
-### `pocket`
+### `revive`
 
-在每个首次访问的新房间中给予玩家一次性主动道具。
-指令格式：
-
-1. `pocketNN MM`：在每个首次访问的新房间中给予ID为`NN`的玩家道具`MM`，`MM`为道具ID；
-2. `pocketNN SS`：在每个首次访问的新房间中给予ID为`NN`的玩家道具`SS`，`SS`为道具名称；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略，`SS`中的标点符号需**省略**。
-3. `pocketNN 0`：ID为`NN`的玩家不再获得一次性道具。
-
-`MM`、`SS`均**支持**添加错误道具。
+复活玩家，指令格式为：`reviveNN`，即复活ID为`NN`的玩家。
+只能在玩家实体被移除前使用该指令，使用该指令复活玩家后，菜单中将不能继续游戏。
 `NN`可省略，默认为0。
-
-道具ID和道具名称参考：[道具列表](https://wofsauge.github.io/IsaacDocs/rep/enums/CollectibleType.html?h=collectibletype)
-[点我返回速查](#指令速查)
-
-### `gulp`
-
-玩家获得被吞下的饰品。
-
-1. `gulpNN MM`：给予ID为`NN`的玩家被吞下的饰品`MM`，`MM`为饰品ID；
-2. `gulpNN SS`：给予ID为`NN`的玩家被吞下的饰品`SS`，`SS`为饰品名称；`SS`不区分大小写，可使用子串作为名称缩写；`SS`中的空格**不会**被忽略，`SS`中的标点符号需**省略**。
-3. `gulpNN`：ID为`NN`的玩家吞下当前饰品栏中的饰品。
-
-`NN`可省略，默认为0。
-
-饰品ID和饰品名称参考：[饰品列表](https://wofsauge.github.io/IsaacDocs/rep/enums/TrinketType.html?h=trinkettype)
 [点我返回速查](#指令速查)
 
 ### `wavycap`
@@ -384,6 +385,13 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 
 ## 游戏状态修改
 
+### `ascent`
+
+切换标签-触发回溯线的值，该值决定了陵墓II/炼狱II的头目房是否生成爸爸的便条。
+指令格式：`ascent`
+
+[点我返回速查](#指令速查)
+
 ### `changechallenge`
 
 切换当前挑战标签。
@@ -396,6 +404,13 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 4. `changechallenge 0`：清除挑战标签。
 
 挑战ID和名称参考：[挑战列表](https://wofsauge.github.io/IsaacDocs/rep/enums/Challenge.html?h=challenge)
+[点我返回速查](#指令速查)
+
+### `delirium`
+
+如果当前层存在精神错乱，则移除迷宫诅咒并传送至精神错乱房间。
+指令格式：`delirium`
+
 [点我返回速查](#指令速查)
 
 ### `eastereggs`
@@ -413,35 +428,16 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 彩蛋种子ID和名称参考：[彩蛋种子列表](https://wofsauge.github.io/IsaacDocs/rep/enums/SeedEffect.html?h=seedeffect)
 [点我返回速查](#指令速查)
 
-### `timecounter`
-
-修改游戏内计时器，指令格式为：`timecounter MM`，即将游戏内计时器修改为`MM`秒。
-`MM`可为负数，也可为`±inf`表示无穷大。
-[点我返回速查](#指令速查)
-
-### `icansee`
-
-移除诅咒、我去“我能永远看清”效果、揭示全图、显示究极隐藏房位置、显示所有问号道具图标（包括支线问号道具，不支持错误道具）。
-指令格式：`icansee`
-[点我返回速查](#指令速查)
-
-### `uncovereverything`
-
-移除诅咒，显示该层当前维度所有房间和红房间，并开启所有红房间的门和隐藏房的门。
-指令格式：`uncovereverything`
-[点我返回速查](#指令速查)
-
 ### `finish`
 
 结束当前游戏。
 指令格式：`finish`
 [点我返回速查](#指令速查)
 
-### `seeds`
+### `icansee`
 
-不重新开始游戏，修改当前游戏的种子。
-指令格式：
-`seeds DD`：将当前游戏的种子修改为`DD`，`DD`**大小写不敏感、空格不敏感**；`DD`支持彩蛋种子。
+移除诅咒、我去“我能永远看清”效果、揭示全图、显示究极隐藏房位置、显示所有问号道具图标（包括支线问号道具，不支持错误道具）。
+指令格式：`icansee`
 [点我返回速查](#指令速查)
 
 ### `madeinheaven`
@@ -454,13 +450,6 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 
 [点我返回速查](#指令速查)
 
-### `rush`
-
-尝试在当前房间生成头目车轮战(BossRush)和蓝子宫(BlueWomb)入口。
-指令格式：`rush`
-
-[点我返回速查](#指令速查)
-
 ### `mirrormineshaft`
 
 如果当前层存在镜子房间或矿井房间，则移除迷宫诅咒并传送至对应房间房间。
@@ -468,11 +457,24 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 
 [点我返回速查](#指令速查)
 
-### `delirium`
+### `rush`
 
-如果当前层存在精神错乱，则移除迷宫诅咒并传送至精神错乱房间。
-指令格式：`delirium`
+尝试在当前房间生成头目车轮战(BossRush)和蓝子宫(BlueWomb)入口。
+指令格式：`rush`
 
+[点我返回速查](#指令速查)
+
+### `seeds`
+
+不重新开始游戏，修改当前游戏的种子。
+指令格式：
+`seeds DD`：将当前游戏的种子修改为`DD`，`DD`**大小写不敏感、空格不敏感**；`DD`支持彩蛋种子。
+[点我返回速查](#指令速查)
+
+### `timecounter`
+
+修改游戏内计时器，指令格式为：`timecounter MM`，即将游戏内计时器修改为`MM`秒。
+`MM`可为负数，也可为`±inf`表示无穷大。
 [点我返回速查](#指令速查)
 
 ### `tp`
@@ -488,11 +490,10 @@ $\bf\color{red}{所有指令不区分大小写，可使用指令前两位字母�
 
 [点我返回速查](#指令速查)
 
-### `ascent`
+### `uncovereverything`
 
-切换标签-触发回溯线的值，该值决定了陵墓II/炼狱II的头目房是否生成爸爸的便条。
-指令格式：`ascent`
-
+移除诅咒，显示该层当前维度所有房间和红房间，并开启所有红房间的门和隐藏房的门。
+指令格式：`uncovereverything`
 [点我返回速查](#指令速查)
 
 ---
